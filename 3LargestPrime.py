@@ -4,11 +4,10 @@ import math
 def main():
     num = 600851475143
     for i in range(int(math.sqrt(num)), 1, -1):
-        if i % 2 == 0 or checkPrime(i) == 0:
+        if i % 2 == 0 or num % i != 0 or checkPrime(i) == 0:
             continue
-        if num % i == 0:
-            print(i)
-            break
+        print(i)
+        break
 
 
 
